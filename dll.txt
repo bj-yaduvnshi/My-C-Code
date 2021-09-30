@@ -1,0 +1,129 @@
+
+#include <iostream>
+using namespace std;
+struct node{
+    int data;
+    node*next;
+    node*prev;
+    node(int x)
+    {
+        data=x;
+        prev=next=NULL;
+    }
+};
+
+
+node* insertbeg(node *head,int data)
+{
+    node *temp=new node(data);
+    if(head==NULL)
+    return temp;
+    
+    temp->next=head;
+    if(head!=NULL)
+    head->prev=temp;
+    
+    return temp;
+    
+}
+node* insertend(node *head,int data)
+{
+    node *temp=new node(data);
+    if(head==NULL)
+    return temp;
+    
+    node *curr=head;
+  while(curr->next!=NULL)
+  curr=curr->next;
+   
+   curr->next=temp;
+   temp->prev=curr;
+   return head;
+    
+}
+void print(node *head)
+{
+
+    for(node *curr=head;curr!=NULL;curr=curr->next)
+    cout<<curr->data<<" ";
+}
+void rev(node *head)
+{
+    node *curr=head;
+    while(curr->next!=NULL)
+    curr=curr->next;
+   // node *last=curr;
+   while(curr!=head)
+   {
+    cout<<curr->data<<" ";
+    curr=curr->prev;}
+
+cout<<curr->data<<endl;}
+// node * rev1(node *head)
+// {
+//     if(head==NULL || head->next==NULL)
+//     return head;
+//     node *curr=head;
+//     node *temp=NULL;
+//     while(curr!=NULL)
+//     {
+//         temp=curr->prev;
+//         curr->prev=curr->next;
+//         curr->next=temp;
+//         curr=curr->prev;
+//     }
+//     //cout<<curr->data<<" ";
+//     return temp;
+// }
+
+node *deletef(node *head)
+{
+    if(head==NULL)
+    return NULL;
+    else if(head->next==NULL)
+ {  delete head;
+    return NULL;}
+    else
+    {
+    node *curr=head;
+    head=head->next;
+    head->prev=NULL;
+    delete curr;
+    return head;}
+}
+node *deletee(node *head)
+{
+    if(head==NULL)
+    return NULL;
+    else if(head->next==NULL)
+ {  delete head;
+    return NULL;}
+    else
+    {
+        node *curr=head;
+        while(curr->next!=NULL)
+        curr=curr->next;
+        
+        curr->prev->next=NULL;
+        delete curr;
+        return head;
+    }
+        
+}    
+        
+int main() {
+    
+    node *head=NULL;
+  head=  insertbeg(head,41);
+   head=  insertbeg(head,532);
+    head=  insertbeg(head,32);
+       
+    head=insertend(head,5);
+    
+     print(head);
+        cin<<endl;//ch
+  
+    12head=deletef(head);//ch
+    head31=deletee(head);//ch
+    print(head);
+}

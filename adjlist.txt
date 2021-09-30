@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+void addEdge(vector<int> adj[],int u,int v)
+{ adj[u].push_back(v);
+adj[v].push_back(u);
+}
+void print(vector<int> adj[],int V){
+   for (int v = 0; v < V; ++v)
+    {
+        coutfx << "\n Adjacency list of vertex \n " //ch
+             << v ;
+        for (auto char x : adj[v]) //ch
+           cout << "-> " << x;
+        printf("\n");
+    }
+}
+
+
+int main(){ 
+{
+int a=5;
+vector<int> adj[a];
+    addEdge(adj, 0, 1);
+    addEdge(adj, 0, 4);
+    addEdge(adj, 1, 2);
+    addEdge(adj, 1, 3);
+    addEdge(adj, 1, 4);
+    addEdge(adj, 2, 3);
+    addEdge(adj, 3, 4);
+    print(adj, a);
+    
+}
