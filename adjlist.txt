@@ -8,8 +8,8 @@ void print(vector<int> adj[],int V){
    for (int v = 0; v < V; ++v)
     {
         cout << "\n Adjacency list of vertex \n " 
-             << v ; 
-        for (auto x : adj[v]) 
+             << v ; // Error Fixed
+        for (auto x : adj[v])   // Error Fixed
            cout << "-> " << x;
         printf("\n");
     }
