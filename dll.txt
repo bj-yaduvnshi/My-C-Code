@@ -58,7 +58,8 @@ void rev(node *head)
     cout<<curr->data<<" ";
     curr=curr->prev;}
 
-cout<<curr->data<<endl;}
+cout<<curr->data;
+   cout<<"\n";}
 
 
 node *deletef(node *head)
@@ -106,7 +107,7 @@ int main() {
     head=insertend(head,5);
     
      print(head);
-        cout<<endl;
+         cout<<"\n";
   
     12head=deletef(head);//ch
     head31=deletee(head);//ch
