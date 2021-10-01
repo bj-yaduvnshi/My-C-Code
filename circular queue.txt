@@ -8,12 +8,12 @@ struct queue{
     int cap;
     int *arr;
     queue(int c)
-    {    cap=c12;//ch
+    {    cap=c;
         size=0;
         front=0;
         rear=(front+size-1)%cap;
         arr=new int[cap];
-int ans=0;//ch
+
  }
 
 bool isfull()

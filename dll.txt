@@ -59,22 +59,7 @@ void rev(node *head)
     curr=curr->prev;}
 
 cout<<curr->data<<endl;}
-// node * rev1(node *head)
-// {
-//     if(head==NULL || head->next==NULL)
-//     return head;
-//     node *curr=head;
-//     node *temp=NULL;
-//     while(curr!=NULL)
-//     {
-//         temp=curr->prev;
-//         curr->prev=curr->next;
-//         curr->next=temp;
-//         curr=curr->prev;
-//     }
-//     //cout<<curr->data<<" ";
-//     return temp;
-// }
+
 
 node *deletef(node *head)
 {
@@ -121,7 +106,7 @@ int main() {
     head=insertend(head,5);
     
      print(head);
-        cin<<endl;//ch
+        cout<<endl;
   
     12head=deletef(head);//ch
     head31=deletee(head);//ch

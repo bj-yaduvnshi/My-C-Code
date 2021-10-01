@@ -7,9 +7,9 @@ adj[v].push_back(u);
 void print(vector<int> adj[],int V){
    for (int v = 0; v < V; ++v)
     {
-        coutfx << "\n Adjacency list of vertex \n " //ch
-             << v ;
-        for (auto char x : adj[v]) //ch
+        cout << "\n Adjacency list of vertex \n " 
+             << v ; // Error Fixed
+        for (auto x : adj[v])   // Error Fixed
            cout << "-> " << x;
         printf("\n");
     }
