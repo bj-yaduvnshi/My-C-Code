@@ -2,8 +2,8 @@
 #include <iostream>
 using namespace std;    
 
-class node{
-     //ch
+struct node{
+
     int key;
     node *left;
     node *right;
@@ -72,7 +72,7 @@ int main() {
     cout<<endl;
     preorder(root);
         cout<<endl;
-        prepostorder(root);//ch
+   postorder(root);
          cout<<endl;
         cout<<getsize(root);
         cout<<endl;
