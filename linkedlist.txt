@@ -16,7 +16,7 @@ void print(Node *head)
     while(head!=NULL)
    { cout<<head->data<<" ";
     head=head->next;
-    //   cout<<endl;
+   
    }
 }
 Node* insertb(Node *head,int x)
@@ -227,19 +227,17 @@ int main()
           cout<<endl;
         head=delf(head);
         print(head);
-          cout<<endl;
-        //  removeLastNode(head);
-        //   print(head);
-        //   cout<<endl;
+            cout<<"\n";
+       
           deletep(head,5);
           print(head);
-          cout<<endl;
+     cout<<"\n";
            head= insert(head,5,309);
         print(head);
-          cout<<endl;
+         cout<<"\n";
           head=reverse(head);
           print(head);
-          cout<<endl;
+             cout<<"\n";
          head= middle(head);
           print(head);
           
