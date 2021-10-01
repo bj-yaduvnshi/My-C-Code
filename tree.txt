@@ -71,9 +71,9 @@ int main() {
     inorder(root);
         cout<<"\n"; // Improvement
     preorder(root);
-        cout<<endl;
+         cout<<"\n";
    postorder(root);
-         cout<<endl;
+            cout<<"\n";
         cout<<getsize(root);
             cout<<"\n"; // Improvement
         cout<<getmax(root);
